@@ -1,0 +1,17 @@
+Transaction fraud is an ongoing problem in credit card industry triggered by data breaches that can 
+expose sensitive user information and the associated financial losses are estimated at $50 billion 
+globally and $28 billion in the US each year. It is currently mitigated primarily using machine learning 
+algorithms that can quickly raise flags for potential frauds. This report will provide a detailed description
+ of construction and implementation of supervised fraud model to detect real-time credit card transaction 
+frauds for a dataset containing US government agency transactions. The data consists of 96,753 records and 
+10 fields, including existing fraud labels, which was used to build a robust model capable of efficiently
+identifying fraudulent transactions. 
+
+To implement the model, the group proceeded with the following steps:
+
+●	Description of Data: Overview of the most significant fields and their distributions.
+●	Data Cleaning: Treatment of outliers, missing values, and zero values. 
+●	Candidate Variables: Creation of 281 candidate variables, from the original 10 fields.
+●	Feature Selection: Z-Scaling, Univariate KS, and FDR (Fraud Detection Rate) filters, and RFECV wrapper to identify the 28 best variables.
+●	Model Algorithms: Implementation of the base linear model (Logistic Regression), and 3 non-linear models (Boosted Tree, Random Forest, and Neural Network) to calculate average FDR at 3% for the data.
+●	Results: Final model and parameter selection to create three statistics tables for training, testing, and Out of Time (OOT) data along with an overall savings calculation.
